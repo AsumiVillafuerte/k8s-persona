@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "asumi-persona-api-collection",
+		"name": "Asumi Persona REST API",
+		"description": "Colección completa de endpoints para la API REST de Personas con Spring Boot WebFlux + R2DBC + H2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Listar Todas las Personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/personas",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas"
+					]
+				},
+				"description": "Obtiene la lista completa de todas las personas registradas en el sistema."
+			},
+			"response": []
+		},
+		{
+			"name": "2. Obtener Persona por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/personas/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas",
+						"1"
+					]
+				},
+				"description": "Obtiene los datos de una persona específica mediante su ID."
+			},
+			"response": []
+		},
+		{
+			"name": "3. Crear Nueva Persona",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Juan Carlos\",\n  \"apellido\": \"Pérez García\",\n  \"email\": \"juan.perez@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/personas",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas"
+					]
+				},
+				"description": "Crea una nueva persona en el sistema. Retorna la persona creada con su ID asignado."
+			},
+			"response": []
+		},
+		{
+			"name": "4. Actualizar Persona",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Asumi Milagros\",\n  \"apellido\": \"Peñafiel Villafuerte\",\n  \"email\": \"asumi.penafiel.villafuerte@vallegrande.edu.pe\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/personas/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas",
+						"1"
+					]
+				},
+				"description": "Actualiza los datos de una persona existente mediante su ID."
+			},
+			"response": []
+		},
+		{
+			"name": "5. Eliminar Persona",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/personas/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas",
+						"1"
+					]
+				},
+				"description": "Elimina una persona del sistema mediante su ID. Retorna 204 No Content si es exitoso."
+			},
+			"response": []
+		},
+		{
+			"name": "6. Crear Persona - María López",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"María\",\n  \"apellido\": \"López Martínez\",\n  \"email\": \"maria.lopez@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/personas",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas"
+					]
+				},
+				"description": "Ejemplo adicional de creación de persona."
+			},
+			"response": []
+		},
+		{
+			"name": "7. Crear Persona - Pedro Sánchez",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Pedro\",\n  \"apellido\": \"Sánchez Rodríguez\",\n  \"email\": \"pedro.sanchez@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/personas",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas"
+					]
+				},
+				"description": "Ejemplo adicional de creación de persona."
+			},
+			"response": []
+		},
+		{
+			"name": "8. Obtener Persona ID 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/personas/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas",
+						"2"
+					]
+				},
+				"description": "Obtiene la persona con ID 2."
+			},
+			"response": []
+		},
+		{
+			"name": "9. Actualizar Persona ID 2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Jose Luis\",\n  \"apellido\": \"Gonzales Pérez\",\n  \"email\": \"jose.luis.gonzales@vallegrande.edu.pe\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/personas/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas",
+						"2"
+					]
+				},
+				"description": "Actualiza la persona con ID 2."
+			},
+			"response": []
+		},
+		{
+			"name": "10. Eliminar Persona ID 3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/personas/3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"personas",
+						"3"
+					]
+				},
+				"description": "Elimina la persona con ID 3."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8085",
+			"type": "string"
+		}
+	]
+}

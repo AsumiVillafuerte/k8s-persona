@@ -9,6 +9,10 @@ spring:
     init:
       mode: always
       schema-locations: classpath:schema.sql
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
 
 server:
   port: ${APP_PORT:8085}
