@@ -18,8 +18,8 @@ spec:
     spec:
       containers:
         - name: asumivillafuerte-api
-          image: persona:latest
-          imagePullPolicy: IfNotPresent
+          image: asumi27/persona:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8085
           env:
